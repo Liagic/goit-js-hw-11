@@ -1,4 +1,5 @@
 export const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.load-content');
 export function createGallery(images) {
   const items = images
     .map(
@@ -45,9 +46,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  gallery.classList.add('loader');
+  loader.classList.add('loader');
 }
 
 export function hideLoader() {
-  gallery.classList.remove('loader');
+  loader.classList.remove('loader');
 }
