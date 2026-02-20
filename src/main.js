@@ -21,6 +21,7 @@ function handleErrorMessage(message = 'Something went wrong') {
     backgroundColor: '#ef4040',
   });
 }
+hideLoader();
 const form = document.querySelector('.form');
 form.addEventListener('submit', event => {
   event.preventDefault();
