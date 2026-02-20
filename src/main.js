@@ -32,15 +32,14 @@ form.addEventListener('submit', event => {
   getImagesByQuery(query)
     .then(res => {
       hideLoader();
-      if (res.data.hits.length === 0) {
+      if (res.hits.length === 0) {
         return Promise.reject(
           new Error(
             'Sorry, there are no images matching your search query. Please try again!'
           )
         );
       }
-      gallery.insertAdjacentHTML('beforeend', createGallery(res.data.hits));
-      updateLightBox();
+      createGallery(res.hits);
     })
     .catch(error => {
       hideLoader();

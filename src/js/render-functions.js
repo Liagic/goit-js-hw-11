@@ -23,7 +23,7 @@ export function createGallery(images) {
       src="${webformatURL}"
       data-source="${largeImageURL}"
       alt="${tags}"
-      width= 360px height=200px;
+      width="360" height="200";
     />
     <ul class="gallery-additional-info">
     <li class="additional-info-text"><span class="additional-info-label">Likes</span>
@@ -41,7 +41,8 @@ export function createGallery(images) {
       }
     )
     .join('');
-  return items;
+  gallery.insertAdjacentHTML('beforeend', items);
+  updateLightBox();
 }
 
 export function clearGallery() {
