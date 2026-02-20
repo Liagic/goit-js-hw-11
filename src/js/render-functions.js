@@ -2,7 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export const gallery = document.querySelector('.gallery');
-const loader = document.querySelector('.load-content');
+const loader = document.querySelector('.loader');
 export function createGallery(images) {
   const items = images
     .map(
